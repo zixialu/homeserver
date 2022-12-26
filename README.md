@@ -97,4 +97,4 @@ https://github.com/awesome-selfhosted/awesome-selfhosted
         network_mode: host
    ```
 
-7. 
+7. TODO: Configure Mosquitto and Zigbee2MQTT, MQTT integration in HA
