@@ -90,7 +90,7 @@ https://github.com/awesome-selfhosted/awesome-selfhosted
         container_name: homeassistant
         image: "ghcr.io/home-assistant/home-assistant:stable"
         volumes:
-          - /PATH_TO_YOUR_CONFIG:/config
+          - /opt/homeassistant/config:/config
           - /etc/localtime:/etc/localtime:ro
         restart: unless-stopped
         privileged: true
