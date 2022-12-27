@@ -40,7 +40,7 @@ For Zigbee devices, we will use [Mosquitto](https://mosquitto.org/) and [Zigbee2
 
 2. Copy the provided `homeassistant/mosquotto/mosquitto.conf` to `/opt/mosquitto/config/mosquitto.conf`
 
-3. Start the Mosquitto container in Portainer and open its console through `/bin/sh`. Create a new MQTT user with `mosquitto_passwd -c /mosquitto/config/password.txt hass`. Once this user is created, open `mosquitto.conf` and uncomment the authentication lines (ensure that the `password.txt` file has been created in the same folder), and restart the Mosquitto container.
+3. Start the Mosquitto container in Portainer and open its console through `/bin/sh`. Create a new MQTT user with `mosquitto_passwd -c /mosquitto/config/password.txt hass`. Once this `hass` user is created, open `mosquitto.conf` and uncomment the authentication lines (ensure that the `password.txt` file has been created in the same folder), and restart the Mosquitto container.
 
 4. To connect Home Assistant to Mosquitto, open the Home Assistant web interface and navigate to `Settings > Devices & Services`. From here, click `Add integration` in the bottom-right, and search for MQTT. Configure the integration with Mosquitto's IP and port (`192.168.0.101` and `1883` in my case), and the auth credentials you set in the last step.
 
