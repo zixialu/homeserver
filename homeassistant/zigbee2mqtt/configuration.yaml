@@ -1,0 +1,22 @@
+# Zigbee2MQTT config
+# /opt/zigbee2mqtt/data/configuration.yaml
+
+homeassistant: true
+permit_join: false
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://192.168.0.101:1883 # This should be the location of your Mosquitto server
+  user: '!secret.yaml user' # Secrets can be kept in a separate file
+  password: '!secret.yaml password'
+  keepalive: 60
+  reject_unauthorized: true
+  version: 4
+serial:
+  port: /dev/ttyACM0 # This depends on your coordinator device
+  adapter: deconz # This field shouldn't be needed for most coordinators
+frontend:
+  port: 8099 # This is 8088 by default
+advanced:
+  channel: 20 # This should be 15, 20, or 25
+  last_seen: ISO_8601_local
+availability: true
