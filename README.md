@@ -45,3 +45,8 @@ For Zigbee devices, we will use [Mosquitto](https://mosquitto.org/) and [Zigbee2
 4. To connect Home Assistant to Mosquitto, open the Home Assistant web interface and navigate to `Settings > Devices & Services`. From here, click `Add integration` in the bottom-right, and search for MQTT. Configure the integration with Mosquitto's IP and port (`192.168.0.101` and `1883` in my case), and the auth credentials you set in the last step.
 
 5. Finally, you'll need to configure Zigbee2MQTT to interface between your physical coordinator and the Mosquitto broker. Copy `homeassistant/zigbee2mqtt/configuration.yaml` to `/opt/zigbee2mqtt/data/configuration.yaml`. Change the MQTT server url to Mosquitto's location, and update the serial port with the location of the adapter you determined earlier. Then, copy `homeassistant/zigbee2mqtt/secret.yaml.example` to `/opt/zigbee2mqtt/data/secret.yaml` and set a username and password inside. Restart the Zigbee2MQTT container and visit port `8099` to view the web interface. From the settings here, you can set the `Network key` and `Pan ID` fields to string and `GENERATE` to generate a new identity. From here, you can restart the container and begin pairing devices.
+
+### Heimdall
+
+Run Heimdall by copying `heimdall/docker-compose.yaml` to another Portainer custom template.
+[See docs for details.](https://hub.docker.com/r/linuxserver/heimdall)
