@@ -17,6 +17,8 @@
     sudo apt update
     sudo apt install openssh-server
     ```
+
+4. Setup DDNS with [DuckDNS](https://www.duckdns.org/install.jsp?tab=linux-cron&domain=zixialu)
     
 4. [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
     
