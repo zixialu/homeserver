@@ -11,10 +11,16 @@
     # Flip the display
     lcd_rotate=2
     ```
+
+3. Setup SSH
+    ```bash
+    sudo apt update
+    sudo apt install openssh-server
+    ```
     
-3. [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+4. [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
     
-4. [Install Portainer with Docker on Linux](https://docs.portainer.io/start/install/server/docker/linux)
+5. [Install Portainer with Docker on Linux](https://docs.portainer.io/start/install/server/docker/linux)
 
 ### Pihole
 
